@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity"
+    
+    android:background="@color/lightBlue">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="449dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+
+        android:background="@drawable/logindesign">
+
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="52dp"
+            android:background="@drawable/signinpage_logo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="340dp"
+        android:layout_height="360dp"
+        android:layout_centerInParent="true"
+        android:layout_marginEnd="37dp"
+        android:background="@drawable/logincontainer">
+
+        <TextView
+            android:id="@+id/logintxt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="18dp"
+            android:text="Login"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="23dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edtusrnme"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:layout_below="@+id/logintxt"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/logininputdesign"
+            android:hint="Username"
+            android:paddingStart="8dp"
+            android:textSize="18dp" />
+
+        <EditText
+            android:id="@+id/edtpswd"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:layout_below="@+id/edtusrnme"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="18dp"
+            android:background="@drawable/logininputdesign"
+            android:hint="Password"
+            android:paddingStart="8dp"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btnsignin"
+            android:layout_width="280dp"
+            android:layout_height="56dp"
+            android:layout_below="@+id/edtpswd"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="26dp"
+            android:layout_marginEnd="18dp"
+            android:backgroundTint="@color/blue"
+            android:text="Sign in"
+            android:textSize="23dp" />
+
+        <Button
+            android:id="@+id/btnfgtpwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnsignin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="@color/white"
+            android:text="forget password"
+            android:textColor="@color/blue"
+            android:textSize="18dp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="18dp">
+
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="11dp"
+            android:layout_marginEnd="6dp"
+            android:background="@color/black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Or"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <View
+            android:layout_width="150dp"
+            android:layout_height="2dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="11dp"
+            android:background="@color/black" />
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:layout_marginTop="18dp"
+        android:layout_centerHorizontal="true"
+        android:text="Your Haven't an Account"
+        android:textSize="18dp"/>
+
+
+</RelativeLayout>
