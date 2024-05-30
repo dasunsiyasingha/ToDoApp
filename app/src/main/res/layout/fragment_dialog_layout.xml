@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="340dp"
+    android:layout_height="650dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentBottom="true"
+
+    tools:context=".MyDialogFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/workrv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="14dp" />
+
+    <RelativeLayout
+        android:id="@+id/inputslayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="Add Task! "
+            android:textColor="@color/black"
+            android:textSize="23dp" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="30dp"
+            android:text="Title:"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/edtTitle"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/title"
+            android:layout_marginTop="5dp"
+            android:text="Enter Title"
+            android:textSize="18dp"
+            android:inputType="text"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:textColor="#787878"/>
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtTitle"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="18dp"
+            android:text="Description:"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/edtDesc"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/desc"
+            android:layout_marginTop="5dp"
+            android:text="Enter Description"
+            android:textSize="18dp"
+            android:inputType="text"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:textColor="#787878"
+            />
+
+
+        <TextView
+            android:id="@+id/location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtDesc"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="18dp"
+            android:text="Location:"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/edtLocation"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/location"
+            android:layout_marginTop="5dp"
+            android:text="Enter Location"
+            android:inputType="text"
+            android:textSize="18dp"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:textColor="#787878"
+            />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtLocation"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="18dp"
+            android:text="Time:"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+        <EditText
+            android:id="@+id/edtTime"
+            android:layout_width="280dp"
+            android:layout_height="50dp"
+            android:layout_below="@+id/time"
+            android:layout_marginTop="5dp"
+            android:text="Enter Time"
+            android:textSize="18dp"
+            android:inputType="text"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:textColor="#787878"
+            />
+
+        <TextView
+            android:id="@+id/status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtTime"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginTop="18dp"
+            android:text="Status:"
+            android:textColor="@color/black"
+            android:textSize="16dp" />
+
+
+        <CheckBox
+            android:id="@+id/edtStatus"
+            android:layout_width="110dp"
+            android:layout_height="50dp"
+
+            android:layout_below="@+id/edtTime"
+            android:layout_marginStart="67dp"
+            android:layout_marginTop="7dp"
+            android:layout_marginEnd="18dp"
+            android:layout_marginBottom="18dp"
+            android:layout_toEndOf="@+id/status"
+            android:inputType="text"
+            android:text="Pending"
+            android:textColor="#787878"
+            android:textSize="18dp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/dialogcancelbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtStatus"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="18dp"
+            android:backgroundTint="@color/white"
+            android:text="Cancel"
+            android:textColor="@color/lightBlue"
+            app:strokeColor="@color/lightBlue"
+            app:strokeWidth="1dp" />
+
+        <Button
+            android:id="@+id/diaddbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtStatus"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="180dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="18dp"
+            android:text="Add" />
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>
