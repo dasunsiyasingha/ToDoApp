@@ -17,7 +17,7 @@ public class SplashActivity extends AppCompatActivity {
 
         class Splashchange{
             void change(){
-                Intent intent = new Intent(getApplicationContext(), RegisterActivity.class);
+                Intent intent = new Intent(getApplicationContext(),RegisterActivity.class);
                 startActivity(intent);
             }
         }

@@ -43,7 +43,7 @@ public class MyDialogFragment extends DialogFragment  {
         EditText title = view.findViewById(R.id.edtTitle);
         EditText description = view.findViewById(R.id.edtDesc);
         EditText location = view.findViewById(R.id.edtLocation);
-        EditText time = view.findViewById(R.id.edtTime);
+
         CheckBox status = view.findViewById(R.id.edtStatus);
 
 
@@ -57,7 +57,6 @@ public class MyDialogFragment extends DialogFragment  {
                 work1.title = title.getText().toString();
                 work1.description = description.getText().toString();
                 work1.location =location.getText().toString();
-                work1.time = time.getText().toString();
                 work1.status = status.getText().toString();
 
 //                workList.add(work1);

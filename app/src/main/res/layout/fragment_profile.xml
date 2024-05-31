@@ -3,14 +3,292 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ProfileFragment">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/txtprofiletitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="Profile Fragment"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="0dp"
+        android:text="My Profile"
+        android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/usrpiccrd"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/txtprofiletitle"
+        android:layout_marginTop="44dp"
+        android:backgroundTint="@color/black"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="75dp">
+
+        <ImageView
+            android:id="@+id/usrpic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/dassaprofile"
+            android:background="@color/white"
+            android:scaleType="centerCrop"/>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/usrpiccrd"
+        android:layout_marginTop="-80dp"
+        android:background="#C3E7FB">
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="98dp"
+            android:text="Hi, Dassa"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/progresscard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginHorizontal="25dp"
+            android:layout_below="@+id/textView3"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="@color/blue"
+            app:cardCornerRadius="14dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="16dp"
+                android:paddingTop="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/progrsstitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Today complete level"
+                        android:textSize="16dp"
+                        android:textColor="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="60%"
+                        android:textColor="@color/white"
+                        android:textSize="16dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="18dp"/>
+
+                </RelativeLayout>
+
+
+                <ProgressBar
+                    style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                    android:layout_width="320dp"
+                    android:layout_height="8dp"
+                    android:max="100"
+                    android:progress="60"
+                    android:layout_below="@+id/progrsstitle"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="18dp"
+                    android:layout_marginBottom="18dp"
+                    android:progressDrawable="@drawable/progressbar_bg" />
+            </RelativeLayout>
+
+
+        </androidx.cardview.widget.CardView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/progresscard">
+
+            <TextView
+                android:id="@+id/titletxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Personal Information"
+                android:textColor="@color/black"
+                android:layout_marginStart="24dp"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:id="@+id/namecontainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titletxt"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="18dp">
+
+                <FrameLayout
+                    android:id="@+id/usericon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/accdetail_user" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/usericon"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dasun Siyasingha"
+                    android:layout_marginStart="140dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/nicknamecontainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/namecontainer"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="18dp">
+
+                <FrameLayout
+                    android:id="@+id/happyicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/accdetail_happy" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/happyicon"
+                    android:text="Nick name"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Dassa"
+                    android:layout_marginStart="140dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bdcontainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/nicknamecontainer"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="18dp">
+
+                <FrameLayout
+                    android:id="@+id/calandricon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/accdetail_calander" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/calandricon"
+                    android:text="Birthday"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2001.02.24"
+                    android:layout_marginStart="140dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/emailcontainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bdcontainer"
+                android:layout_marginStart="48dp"
+                android:layout_marginTop="18dp">
+
+                <FrameLayout
+                    android:id="@+id/emailicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/accdetail_message" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_toEndOf="@+id/emailicon"
+                    android:text="E - Mail"
+                    android:textColor="@color/black"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dasunsiya@gmail.com"
+                    android:layout_marginStart="140dp"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"/>
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/signoutbtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/blue"
+                android:layout_below="@+id/emailcontainer"
+                android:layout_marginTop="24dp"
+                android:layout_centerVertical="true"
+                android:layout_marginHorizontal="48dp"
+                android:text="Sign Out"
+                android:textSize="16dp"/>
+
+        </RelativeLayout>
+
+<!--        <ListView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="800dp"-->
+<!--            android:layout_marginTop="18dp"-->
+<!--            android:layout_below="@+id/progresscard"/>-->
+
+
+    </RelativeLayout>
+
+
+
+
+
 
 </RelativeLayout>

@@ -115,38 +115,34 @@
             android:textColor="#787878"
             />
 
-        <TextView
-            android:id="@+id/time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/edtLocation"
-            android:layout_alignParentStart="true"
-            android:layout_marginStart="18dp"
-            android:layout_marginEnd="18dp"
-            android:layout_marginTop="18dp"
-            android:text="Time:"
-            android:textColor="@color/black"
-            android:textSize="16dp" />
-
-        <EditText
-            android:id="@+id/edtTime"
-            android:layout_width="280dp"
-            android:layout_height="50dp"
-            android:layout_below="@+id/time"
-            android:layout_marginTop="5dp"
-            android:text="Enter Time"
-            android:textSize="18dp"
-            android:inputType="text"
-            android:layout_marginStart="18dp"
-            android:layout_marginEnd="18dp"
-            android:textColor="#787878"
-            />
+<!--        <TextView-->
+<!--            android:id="@+id/time"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/edtLocation"-->
+<!--            android:layout_alignParentStart="true"-->
+<!--            android:layout_marginStart="18dp"-->
+<!--            android:layout_marginEnd="18dp"-->
+<!--            android:layout_marginTop="18dp"-->
+<!--            android:text="Time:"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="16dp" />-->
+<!--        -->
+<!--        <TimePicker-->
+<!--            android:id="@+id/edtTime"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="140dp"-->
+<!--            android:layout_below="@+id/time"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:layout_marginStart="18dp"-->
+<!--            android:layout_marginEnd="18dp"-->
+<!--            android:timePickerMode="spinner" />-->
 
         <TextView
             android:id="@+id/status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/edtTime"
+            android:layout_below="@+id/edtLocation"
             android:layout_alignParentStart="true"
             android:layout_marginStart="18dp"
             android:layout_marginEnd="18dp"
@@ -161,7 +157,7 @@
             android:layout_width="110dp"
             android:layout_height="50dp"
 
-            android:layout_below="@+id/edtTime"
+            android:layout_below="@+id/edtLocation"
             android:layout_marginStart="67dp"
             android:layout_marginTop="7dp"
             android:layout_marginEnd="18dp"
