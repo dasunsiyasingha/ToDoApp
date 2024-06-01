@@ -47,7 +47,7 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/edtusrnme"
+            android:id="@+id/signinusrnme"
             android:layout_width="280dp"
             android:layout_height="56dp"
             android:layout_below="@+id/logintxt"
@@ -62,10 +62,10 @@
             android:textSize="18dp" />
 
         <EditText
-            android:id="@+id/edtpswd"
+            android:id="@+id/signinpswd"
             android:layout_width="280dp"
             android:layout_height="56dp"
-            android:layout_below="@+id/edtusrnme"
+            android:layout_below="@+id/signinusrnme"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="18dp"
@@ -80,7 +80,7 @@
             android:id="@+id/btnsignin"
             android:layout_width="280dp"
             android:layout_height="56dp"
-            android:layout_below="@+id/edtpswd"
+            android:layout_below="@+id/signinpswd"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="18dp"
