@@ -27,7 +27,6 @@ public class LoginActivity extends AppCompatActivity {
         databaseHelper = new DatabaseHelper(this);
 
 
-
         binding.btnsignin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,8 +40,14 @@ public class LoginActivity extends AppCompatActivity {
 
                     if(checkusrpwsd == true){
                         Toast.makeText(LoginActivity.this,"Login successfully",Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                        startActivity(intent);
+
+                        Intent intentlogin = new Intent(getApplicationContext(), MainActivity.class);
+
+                        Bundle bundle = new Bundle();
+                        bundle.putString("usrname", username.toString());
+
+                        intentlogin.putExtras(bundle);
+                        startActivity(intentlogin);
                     }else{
                         Toast.makeText(LoginActivity.this,"You have not registered!",Toast.LENGTH_SHORT).show();
                     }

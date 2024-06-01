@@ -51,12 +51,12 @@
         android:background="#C3E7FB">
 
         <TextView
-            android:id="@+id/textView3"
+            android:id="@+id/texthinme"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="98dp"
-            android:text="Hi, Dassa"
+            android:text="Hi, Sunil"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18dp"
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginHorizontal="25dp"
-            android:layout_below="@+id/textView3"
+            android:layout_below="@+id/texthinme"
             android:layout_marginTop="24dp"
             android:backgroundTint="@color/blue"
             app:cardCornerRadius="14dp">
@@ -159,6 +159,7 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/usernameview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dasun Siyasingha"
@@ -191,6 +192,7 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/usernicknameview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Dassa"
@@ -223,6 +225,7 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/userbdview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="2001.02.24"
@@ -255,6 +258,7 @@
                     android:textSize="16dp" />
 
                 <TextView
+                    android:id="@+id/useremailview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="dasunsiya@gmail.com"
