@@ -40,11 +40,12 @@ public class LoginActivity extends AppCompatActivity {
 
                     if(checkusrpwsd == true){
                         Toast.makeText(LoginActivity.this,"Login successfully",Toast.LENGTH_SHORT).show();
+                        int id = databaseHelper.getuserid(username);
 
                         Intent intentlogin = new Intent(getApplicationContext(), MainActivity.class);
 
                         Bundle bundle = new Bundle();
-                        bundle.putString("usrname", username.toString());
+                        bundle.putInt("usrid", id);
 
                         intentlogin.putExtras(bundle);
                         startActivity(intentlogin);

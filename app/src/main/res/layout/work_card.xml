@@ -20,6 +20,13 @@
             android:padding="16dp">
 
             <TextView
+                android:id="@+id/viewtaskid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:visibility="gone"/>
+
+            <TextView
                 android:id="@+id/viewtitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

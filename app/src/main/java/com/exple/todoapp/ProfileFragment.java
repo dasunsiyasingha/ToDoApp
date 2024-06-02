@@ -29,7 +29,7 @@ public class ProfileFragment extends Fragment {
 
         databaseHelper = new DatabaseHelper(getContext());
 
-        String username = this.getArguments().getString("username");
+        int userid = this.getArguments().getInt("userid");
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
@@ -39,9 +39,9 @@ public class ProfileFragment extends Fragment {
         TextView birthday = view.findViewById(R.id.userbdview);
         TextView email = view.findViewById(R.id.useremailview);
 
-        HashMap<String,String> userinfo = databaseHelper.getuserinfo(username);
+        HashMap<String,String> userinfo = databaseHelper.getuserinfo(userid);
 
-        hinicknme.setText(userinfo.get("nickname"));
+        hinicknme.setText("Hi, "+userinfo.get("nickname"));
         name.setText(userinfo.get("username"));
         nickname.setText(userinfo.get("nickname"));
         birthday.setText(userinfo.get("birthday"));

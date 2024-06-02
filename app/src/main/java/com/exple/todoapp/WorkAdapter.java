@@ -30,9 +30,9 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.MyViewHolder>{
     @Override
     public void onBindViewHolder(@NonNull WorkAdapter.MyViewHolder holder, int position) {
         Work work = workList.get(position);
+        holder.taskid.setText(work.taskid);
         holder.title.setText(work.title);
         holder.description.setText(work.description);
-        holder.time.setText(work.time);
         holder.location.setText(work.location);
         holder.status.setText(work.status);
 
@@ -44,12 +44,12 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.MyViewHolder>{
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        TextView title, description, time, location, status;
+        TextView taskid, title, description, location, status;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
+            taskid = itemView.findViewById(R.id.viewtaskid);
             title = itemView.findViewById(R.id.viewtitle);
             description = itemView.findViewById(R.id.viewdesc);
-            time = itemView.findViewById(R.id.viewtime);
             location = itemView.findViewById(R.id.viewlocation);
             status = itemView.findViewById(R.id.viewstatus);
 
