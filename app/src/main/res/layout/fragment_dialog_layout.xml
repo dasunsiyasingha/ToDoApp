@@ -166,18 +166,16 @@
 
         <CheckBox
             android:id="@+id/edtStatus"
-            android:layout_width="110dp"
-            android:layout_height="50dp"
-
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/edtLocation"
             android:layout_marginStart="67dp"
             android:layout_marginTop="7dp"
             android:layout_marginEnd="18dp"
             android:layout_marginBottom="18dp"
             android:layout_toEndOf="@+id/status"
-            android:inputType="text"
-            android:text="Pending"
-            android:textColor="#787878"
+            android:checked="false"
+            android:text="pending"
             android:textSize="18dp" />
 
         <com.google.android.material.button.MaterialButton

@@ -41,8 +41,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <Button
-            android:id="@+id/addbtn"
+        <RelativeLayout
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_alignParentStart="true"
@@ -52,8 +51,17 @@
             android:layout_marginStart="323dp"
             android:layout_marginTop="645dp"
             android:layout_marginEnd="40dp"
-            android:layout_marginBottom="38dp"
-            android:background="@drawable/baseline_add_24" />
+            android:background="@drawable/whitebckgwndbtn"
+            android:layout_marginBottom="38dp">
+
+            <Button
+                android:id="@+id/addbtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/baseline_add_24" />
+
+        </RelativeLayout>
+
 
         <TextView
             android:id="@+id/example"

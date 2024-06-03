@@ -34,7 +34,6 @@ public class MyDialogFragment extends DialogFragment  {
                              Bundle savedInstanceState) {
         // Inflate the layout for your dialog
         View view = inflater.inflate(R.layout.fragment_dialog_layout, container, false);
-//        View viewList = inflater.inflate(R.layout.fragment_list, container, false);
 
         databaseHelper = new DatabaseHelper(getContext());
 
@@ -60,26 +59,26 @@ public class MyDialogFragment extends DialogFragment  {
             public void onClick(View v) {
 
 
-                Work work1 = new Work();
-                work1.title = title.getText().toString();
-                work1.description = description.getText().toString();
-                work1.location =location.getText().toString();
-                work1.status = status.getText().toString();
-                workList.addwork(work1);
+//                Work work1 = new Work();
+//                work1.title = title.getText().toString();
+//                work1.description = description.getText().toString();
+//                work1.location =location.getText().toString();
+//                work1.status = status.getText().toString();
+//                workList.addwork(work1);
 
 //DATABASE ADDING PART START
-//                int in_taskid = Integer.parseInt(taskid.getText().toString())+1;
-//                String in_title = title.getText().toString();
-//                String in_desc = description.getText().toString();
-//                String in_location = location.getText().toString();
-//                String in_status = status.getText().toString();
-//
-//                boolean result = databaseHelper.taskAdd(in_taskid, in_title, in_desc, in_location, in_status, userid);
-//                if(result == true){
-//                    Toast.makeText(getActivity(),"Task added", Toast.LENGTH_SHORT).show();
-//                }else{
-//                    Toast.makeText(getActivity(),"Task not add, Try again..", Toast.LENGTH_SHORT).show();
-//                }
+                int in_taskid = Integer.parseInt(taskid.getText().toString())+1;
+                String in_title = title.getText().toString();
+                String in_desc = description.getText().toString();
+                String in_location = location.getText().toString();
+                String in_status = status.getText().toString();
+
+                boolean result = databaseHelper.taskAdd(in_taskid, in_title, in_desc, in_location, in_status, userid);
+                if(result == true){
+                    Toast.makeText(getActivity(),"Task added", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(getActivity(),"Task not add, Try again..", Toast.LENGTH_SHORT).show();
+                }
 //DATABASE ADDING PART CLOSE
 
             }
@@ -90,8 +89,9 @@ public class MyDialogFragment extends DialogFragment  {
             @Override
             public void onClick(View v) {
 
-                View inputwrapper = view.findViewById(R.id.inputslayout);
-                inputwrapper.setVisibility(View.INVISIBLE);
+//                View inputwrapper = view.findViewById(R.id.inputslayout);
+                dismiss();
+//                inputwrapper.setVisibility(View.INVISIBLE);
 
 //                RecyclerView recyclerView = viewList.findViewById(R.id.workrv);
 //                LinearLayoutManager layoutManager = new LinearLayoutManager(viewList.getContext());

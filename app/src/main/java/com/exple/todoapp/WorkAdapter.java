@@ -1,5 +1,6 @@
 package com.exple.todoapp;
 
+import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -34,8 +35,14 @@ public class WorkAdapter extends RecyclerView.Adapter<WorkAdapter.MyViewHolder>{
         holder.title.setText(work.title);
         holder.description.setText(work.description);
         holder.location.setText(work.location);
-        holder.status.setText(work.status);
-
+//        holder.status.setText(work.status);
+        if(work.status == "true"){
+            holder.status.setText("true");
+            holder.status.setBackgroundColor(Color.GREEN);
+        }else{
+            holder.status.setText("false");
+            holder.status.setBackgroundColor(Color.RED);
+        }
     }
 
     @Override

@@ -16,7 +16,6 @@ import com.google.android.material.navigation.NavigationBarView;
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
-
     ListFragment listFragment = new ListFragment();
     ReminderFragment reminderFragment = new ReminderFragment();
     ProfileFragment profileFragment = new ProfileFragment();
@@ -50,9 +49,6 @@ public class MainActivity extends AppCompatActivity {
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
 
-
-
-
             @Override
             public boolean onNavigationItemSelected(MenuItem item) {
                 Bundle bundle = new Bundle();
@@ -66,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
 //                        Bundle bundle = new Bundle();
 //                        bundle.putInt("userid",id);
-//
+
                         listFragment.setArguments(bundle);
                         fragmentTransactionlist.replace(R.id.container,listFragment).commit();
 
@@ -91,7 +87,6 @@ public class MainActivity extends AppCompatActivity {
                         FragmentManager fragmentManagerprofile = getSupportFragmentManager();
                         FragmentTransaction fragmentTransactionprofile = fragmentManagerprofile.beginTransaction();
 
-                        //bundle here
 //                        Bundle bundle = new Bundle();
 //                        bundle.putInt("userid",id);
 
