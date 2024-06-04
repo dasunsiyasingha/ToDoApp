@@ -50,9 +50,10 @@ public class MyDialogFragment extends DialogFragment  {
 
 
         CheckBox checkbox = view.findViewById(R.id.edtStatus);
+        int nextTaskid = Integer.parseInt(databaseHelper.lasttaskid());
+//        int nextTaskid = 1;
 
-
-        taskid.setText(String.valueOf(databaseHelper.lasttaskid()));
+        taskid.setText(String.valueOf(nextTaskid));
 //        taskid.setText(String.valueOf(userid));
 
 
@@ -60,26 +61,16 @@ public class MyDialogFragment extends DialogFragment  {
             @Override
             public void onClick(View v) {
 
-
-//                Work work1 = new Work();
-//                work1.title = title.getText().toString();
-//                work1.description = description.getText().toString();
-//                work1.location =location.getText().toString();
-//                work1.status = status.getText().toString();
-//                workList.addwork(work1);
-
 //DATABASE ADDING PART START
-                int in_taskid = Integer.parseInt(taskid.getText().toString())+1;
+                int in_taskid = nextTaskid;
                 String in_title = title.getText().toString();
                 String in_desc = description.getText().toString();
                 String in_location = location.getText().toString();
-//                String in_status = status;
+
                 String status;
                 if (checkbox.isChecked()) {
-                    // Do something if the checkbox is checked (true)
                     status = "Completed";
                 } else {
-                    // Do something if the checkbox is unchecked (false)
                     status = "Pending";
                 }
 
@@ -98,35 +89,10 @@ public class MyDialogFragment extends DialogFragment  {
 
             @Override
             public void onClick(View v) {
-
-//                View inputwrapper = view.findViewById(R.id.inputslayout);
                 dismiss();
-//                inputwrapper.setVisibility(View.INVISIBLE);
-
-//                RecyclerView recyclerView = viewList.findViewById(R.id.workrv);
-//                LinearLayoutManager layoutManager = new LinearLayoutManager(viewList.getContext());
-//                workAdapter = new WorkAdapter(workList);
-//                recyclerView.setLayoutManager(layoutManager);
-//                recyclerView.setAdapter(workAdapter);
-
-
-
-
-//                if(workList != null && workList.workarraylist != null){
-//                    RecyclerView recyclerView = view.findViewById(R.id.workrv);
-//                    LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
-////                    worklist = workList.workarraylist;
-//                    WorkAdapter workAdapter =new WorkAdapter(databaseHelper.gettasks(userid));
-//                    recyclerView.setLayoutManager(layoutManager);
-//                    recyclerView.setAdapter(workAdapter);
-//                }
-
             }
 
         });
-
-
-
         return view;
     }
 }
