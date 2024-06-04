@@ -48,7 +48,9 @@ public class MyDialogFragment extends DialogFragment  {
         EditText location = view.findViewById(R.id.edtLocation);
         TextView taskid = view.findViewById(R.id.taskid);
 
-        CheckBox status = view.findViewById(R.id.edtStatus);
+
+        CheckBox checkbox = view.findViewById(R.id.edtStatus);
+
 
         taskid.setText(String.valueOf(databaseHelper.lasttaskid()));
 //        taskid.setText(String.valueOf(userid));
@@ -71,9 +73,17 @@ public class MyDialogFragment extends DialogFragment  {
                 String in_title = title.getText().toString();
                 String in_desc = description.getText().toString();
                 String in_location = location.getText().toString();
-                String in_status = status.getText().toString();
+//                String in_status = status;
+                String status;
+                if (checkbox.isChecked()) {
+                    // Do something if the checkbox is checked (true)
+                    status = "Completed";
+                } else {
+                    // Do something if the checkbox is unchecked (false)
+                    status = "Pending";
+                }
 
-                boolean result = databaseHelper.taskAdd(in_taskid, in_title, in_desc, in_location, in_status, userid);
+                boolean result = databaseHelper.taskAdd(in_taskid, in_title, in_desc, in_location, status, userid);
                 if(result == true){
                     Toast.makeText(getActivity(),"Task added", Toast.LENGTH_SHORT).show();
                 }else{

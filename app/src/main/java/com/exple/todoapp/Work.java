@@ -10,8 +10,7 @@ public class Work {
     public String taskid = "0";
     public String title = "";
     public String description = "";
-    public  String status = "false";
-
+    public  String status = "Pending";
     public String location = "";
 
 }

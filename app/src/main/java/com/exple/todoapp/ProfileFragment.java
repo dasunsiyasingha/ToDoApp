@@ -9,12 +9,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.exple.todoapp.databinding.ActivityLoginBinding;
 import com.exple.todoapp.databinding.FragmentProfileBinding;
 
 import java.util.HashMap;
+
+import kotlin.internal.UProgressionUtilKt;
 
 public class ProfileFragment extends Fragment {
 
@@ -30,6 +33,8 @@ public class ProfileFragment extends Fragment {
         databaseHelper = new DatabaseHelper(getContext());
 
         int userid = this.getArguments().getInt("userid");
+        float precentge = databaseHelper.taskCompletePrecentage(String.valueOf(userid));
+        int progressint = (int)precentge;
 
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
 
@@ -38,6 +43,8 @@ public class ProfileFragment extends Fragment {
         TextView nickname = view.findViewById(R.id.usernicknameview);
         TextView birthday = view.findViewById(R.id.userbdview);
         TextView email = view.findViewById(R.id.useremailview);
+        TextView txtprogrss = view.findViewById(R.id.txtprogress);
+        ProgressBar taskprogress = view.findViewById(R.id.taskprogress);
 
         HashMap<String,String> userinfo = databaseHelper.getuserinfo(userid);
 
@@ -46,6 +53,10 @@ public class ProfileFragment extends Fragment {
         nickname.setText(userinfo.get("nickname"));
         birthday.setText(userinfo.get("birthday"));
         email.setText(userinfo.get("email"));
+
+
+        txtprogrss.setText(String.valueOf(progressint)+"%");
+        taskprogress.setProgress(progressint);
 
         signoutbtn = view.findViewById(R.id.signoutbtn);
         signoutbtn.setOnClickListener(new View.OnClickListener() {

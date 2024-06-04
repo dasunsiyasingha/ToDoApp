@@ -40,7 +40,7 @@ public class ListFragment extends Fragment {
 //VIEW LIST USING DATABASE DATA
         RecyclerView recyclerView = viewlist.findViewById(R.id.workrv);
         LinearLayoutManager layoutManager = new LinearLayoutManager(getContext());
-        WorkAdapter workAdapter =new WorkAdapter(databaseHelper.gettasks(userid));
+        WorkAdapter workAdapter =new WorkAdapter(getContext(), databaseHelper.gettasks(userid), userid);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(workAdapter);
 //END   VIEW LIST USING DATABASE DATA
