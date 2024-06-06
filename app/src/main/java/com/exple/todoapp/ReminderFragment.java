@@ -17,8 +17,8 @@ public class ReminderFragment extends Fragment {
         // Inflate the layout for this fragment
         View viewreminder = inflater.inflate(R.layout.fragment_reminder, container, false);
         int userid = this.getArguments().getInt("userid");
-        TextView user = viewreminder.findViewById(R.id.user);
-        user.setText(userid+"");
+//        TextView user = viewreminder.findViewById(R.id.user);
+//        user.setText(userid+"");
         return viewreminder;
     }
 }

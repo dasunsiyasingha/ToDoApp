@@ -6,11 +6,21 @@
     tools:context=".ReminderFragment">
 
     <TextView
-        android:id="@+id/user"
+        android:id="@+id/txttitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:text="Reminder Fragment"
         android:textColor="@color/black"
+        android:textStyle="bold"
         android:textSize="20dp" />
+
+    <ListView
+        android:id="@+id/reminderlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/txttitle"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="18dp"/>
 </RelativeLayout>
