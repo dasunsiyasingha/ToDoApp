@@ -50,11 +50,10 @@ public class MyDialogFragment extends DialogFragment  {
 
 
         CheckBox checkbox = view.findViewById(R.id.edtStatus);
-        int nextTaskid = Integer.parseInt(databaseHelper.lasttaskid());
-//        int nextTaskid = 1;
+        int nextTaskid = Integer.parseInt(databaseHelper.lasttaskid())+1;
+
 
         taskid.setText(String.valueOf(nextTaskid));
-//        taskid.setText(String.valueOf(userid));
 
 
         dialogAddBtn.setOnClickListener(new View.OnClickListener() {

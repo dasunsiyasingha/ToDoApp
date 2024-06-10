@@ -146,7 +146,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if(lastId == ""){
             return "0";
         }else{
-            return "1";
+            return lastId;
         }
 
     }
