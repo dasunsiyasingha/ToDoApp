@@ -3,7 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PswdChangeFragment">
+    tools:context=".EditNameFragment">
+
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -27,14 +28,13 @@
             android:textSize="24dp"
             android:layout_margin="10dp"
             android:textColor="@color/black"
-            android:text="Change Password"/>
+            android:text="Change User name"/>
 
 
         <RelativeLayout
             android:id="@+id/inputcontainer"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
             android:layout_below="@+id/chngpswdtxt"
             android:orientation="vertical">
 
@@ -58,7 +58,6 @@
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="18dp"
                 android:layout_below="@+id/oldpswdtxt"
-                android:inputType="textPassword"
                 android:background="@drawable/logininputdesign"
                 android:hint="current password"
                 android:paddingStart="8dp"
@@ -66,10 +65,10 @@
 
 
             <TextView
-                android:id="@+id/newpswdtxt"
+                android:id="@+id/newusernmetxt"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="New Password"
+                android:text="New User name"
                 android:layout_below="@+id/oldpswd"
                 android:textStyle="bold"
                 android:layout_marginTop="24dp"
@@ -78,49 +77,19 @@
                 android:textSize="16dp"/>
 
             <EditText
-                android:id="@+id/newpswd"
+                android:id="@+id/newusernme"
                 android:layout_width="280dp"
                 android:layout_height="56dp"
-                android:layout_below="@+id/newpswdtxt"
+                android:layout_below="@+id/newusernmetxt"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginStart="18dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="18dp"
-                android:inputType="textPassword"
                 android:background="@drawable/logininputdesign"
-                android:hint="new password"
+                android:hint="New User name"
                 android:paddingStart="8dp"
                 android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/renewpswdtxt"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Comfirm New Password"
-                android:layout_below="@+id/newpswd"
-                android:textStyle="bold"
-                android:layout_marginTop="24dp"
-                android:layout_marginStart="20dp"
-                android:textColor="@color/black"
-                android:textSize="16dp"/>
-
-            <EditText
-                android:id="@+id/renewpswd"
-                android:layout_width="280dp"
-                android:layout_height="56dp"
-                android:layout_below="@+id/renewpswdtxt"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentEnd="true"
-                android:layout_marginStart="18dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginEnd="18dp"
-                android:inputType="textPassword"
-                android:background="@drawable/logininputdesign"
-                android:hint="Comfirm new password"
-                android:paddingStart="8dp"
-                android:textSize="18dp" />
-
 
         </RelativeLayout>
 

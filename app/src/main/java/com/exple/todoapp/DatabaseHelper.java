@@ -294,9 +294,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     //END UPDATE PASSWORD
 
+                                                                                                    //USER NAME EDIT
 
+    //USERNAME EDIT
+    boolean editusername(String id, String newusername){
+        SQLiteDatabase db = this.getWritableDatabase();
 
+        ContentValues cv = new ContentValues();
+        cv.put("username",newusername);
 
+        int result = db.update("allusers", cv, "id = ?", new String[]{id} );
+        if (result > 0){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
 
 
 }

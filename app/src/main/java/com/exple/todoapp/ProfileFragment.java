@@ -15,6 +15,8 @@ import android.widget.TextView;
 import com.exple.todoapp.databinding.ActivityLoginBinding;
 import com.exple.todoapp.databinding.FragmentProfileBinding;
 
+import org.w3c.dom.Text;
+
 import java.util.HashMap;
 
 import kotlin.internal.UProgressionUtilKt;
@@ -46,6 +48,8 @@ public class ProfileFragment extends Fragment {
         TextView txtprogrss = view.findViewById(R.id.txtprogress);
         ProgressBar taskprogress = view.findViewById(R.id.taskprogress);
 
+        TextView editnmebtn = view.findViewById(R.id.editnmebtn);
+
         HashMap<String,String> userinfo = databaseHelper.getuserinfo(userid);
 
         hinicknme.setText("Hi, "+userinfo.get("nickname"));
@@ -60,6 +64,7 @@ public class ProfileFragment extends Fragment {
 
         signoutbtn = view.findViewById(R.id.signoutbtn);
         pswdchangebtn = view.findViewById(R.id.chngpswdtbtn);
+
 
         signoutbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -78,6 +83,17 @@ public class ProfileFragment extends Fragment {
                 pswdChangeFragment.setArguments(bundle1);
                 pswdChangeFragment.show(getChildFragmentManager(), "PswdChange"); // Use getChildFragmentManager for fragments
 
+            }
+        });
+
+        editnmebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle2 = new Bundle();
+                bundle2.putInt("userid", userid);
+                EditNameFragment editNameFragment = new EditNameFragment();
+                editNameFragment.setArguments(bundle2);
+                editNameFragment.show(getChildFragmentManager(), "Editname"); // Use getChildFragmentManager for fragments
             }
         });
         return view;

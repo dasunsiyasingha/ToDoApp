@@ -13,6 +13,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.HashMap;
+
 public class ChangeInfoFragment extends DialogFragment {
     DatabaseHelper databaseHelper;
 
@@ -36,6 +38,11 @@ public class ChangeInfoFragment extends DialogFragment {
         Button okbtn = view.findViewById(R.id.okbtn);
         Button cancelbtn = view.findViewById(R.id.cancelbtn);
 
+        HashMap<String,String> userinfo = databaseHelper.getuserinfo(id);
+
+        chngeNickname.setText(userinfo.get("nickname"));
+        chngeBd.setText(userinfo.get("birthday"));
+        chngeEmail.setText(userinfo.get("email"));
 
 
         chngeinfo.setText(String.valueOf(id));
