@@ -37,7 +37,7 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="98dp"
-            android:text="Hi, Sunil"
+            android:text="Hi, nickname"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="18dp"
@@ -144,7 +144,7 @@
                     android:id="@+id/usernameview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dasun Siyasingha"
+                    android:text="user name"
                     android:layout_marginStart="140dp"
                     android:textColor="@color/black"
                     android:textSize="16dp"/>
@@ -177,7 +177,7 @@
                     android:id="@+id/usernicknameview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Dassa"
+                    android:text="NickName"
                     android:layout_marginStart="140dp"
                     android:textColor="@color/black"
                     android:textSize="16dp"/>
@@ -210,7 +210,7 @@
                     android:id="@+id/userbdview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2001.02.24"
+                    android:text="1999.12.31"
                     android:layout_marginStart="140dp"
                     android:textColor="@color/black"
                     android:textSize="16dp"/>
@@ -243,7 +243,7 @@
                     android:id="@+id/useremailview"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="dasunsiya@gmail.com"
+                    android:text="user@gmail.com"
                     android:layout_marginStart="140dp"
                     android:textColor="@color/black"
                     android:textSize="16dp"/>
@@ -287,7 +287,7 @@
             android:id="@+id/usrpic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/dassaprofile"
+            android:src="@drawable/personicon"
             android:background="@color/white"
             android:scaleType="centerCrop"/>
 

@@ -1,6 +1,5 @@
 package com.exple.todoapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -8,8 +7,9 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.TextView;
 
-import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     ListFragment listFragment = new ListFragment();
-    ReminderFragment reminderFragment = new ReminderFragment();
+    InfoFragment infoFragment = new InfoFragment();
     ProfileFragment profileFragment = new ProfileFragment();
 
     @Override
@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
 
         //link with bottom navigation bar on layout(XML) file
         bottomNavigationView = findViewById(R.id.bottomNav);
+        TextView settingbtn = findViewById(R.id.settingbtn);
 
         //when Open app ByDefualt open list fragment
 //        getSupportFragmentManager().beginTransaction().replace(R.id.container,listFragment).commit();
@@ -65,10 +66,11 @@ public class MainActivity extends AppCompatActivity {
 
                         listFragment.setArguments(bundle);
                         fragmentTransactionlist.replace(R.id.container,listFragment).commit();
+                        settingbtn.setVisibility(View.INVISIBLE);
 
                         return true;
 
-                    case R.id.reminder:
+                    case R.id.info:
 //                        getSupportFragmentManager().beginTransaction().replace(R.id.container, reminderFragment).commit();
                         FragmentManager fragmentManagerreminder = getSupportFragmentManager();
                         FragmentTransaction fragmentTransactionreminder = fragmentManagerreminder.beginTransaction();
@@ -76,11 +78,12 @@ public class MainActivity extends AppCompatActivity {
 //                        Bundle bundle = new Bundle();
 //                        bundle.putInt("userid", id);
 
-                        reminderFragment.setArguments(bundle);
-                        fragmentTransactionreminder.replace(R.id.container,reminderFragment).commit();
+                        infoFragment.setArguments(bundle);
+                        fragmentTransactionreminder.replace(R.id.container, infoFragment).commit();
 
 //                        badgeDrawable.setVisible(false);
 //                        badgeDrawable.clearNumber();
+                        settingbtn.setVisibility(View.INVISIBLE);
                         return true;
 
                     case R.id.profile:
@@ -92,12 +95,17 @@ public class MainActivity extends AppCompatActivity {
 
                         profileFragment.setArguments(bundle);
                         fragmentTransactionprofile.replace(R.id.container,profileFragment).commit();
+
+                        settingbtn.setVisibility(View.VISIBLE);
                         return true;
                 }
 
                 return false;
             }
         });
+
+
+
 
     }
 }
