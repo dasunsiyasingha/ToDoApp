@@ -8,6 +8,8 @@ import androidx.fragment.app.FragmentTransaction;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
 
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -31,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
         //link with bottom navigation bar on layout(XML) file
         bottomNavigationView = findViewById(R.id.bottomNav);
+        ImageView chngeinfobtn = findViewById(R.id.changeinfobtn);
 
         //when Open app ByDefualt open list fragment
 //        getSupportFragmentManager().beginTransaction().replace(R.id.container,listFragment).commit();
@@ -65,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
 
                         listFragment.setArguments(bundle);
                         fragmentTransactionlist.replace(R.id.container,listFragment).commit();
+                        chngeinfobtn.setVisibility(View.INVISIBLE);
 
                         return true;
 
@@ -78,6 +82,7 @@ public class MainActivity extends AppCompatActivity {
 
                         reminderFragment.setArguments(bundle);
                         fragmentTransactionreminder.replace(R.id.container,reminderFragment).commit();
+                        chngeinfobtn.setVisibility(View.INVISIBLE);
 
 //                        badgeDrawable.setVisible(false);
 //                        badgeDrawable.clearNumber();
@@ -92,6 +97,18 @@ public class MainActivity extends AppCompatActivity {
 
                         profileFragment.setArguments(bundle);
                         fragmentTransactionprofile.replace(R.id.container,profileFragment).commit();
+                        chngeinfobtn.setVisibility(View.VISIBLE);
+                        chngeinfobtn.setOnClickListener(new View.OnClickListener() {
+                            @Override
+                            public void onClick(View v) {
+                                Bundle bundleww = new Bundle();
+                                bundleww.putInt("userid", id);
+                                ChangeInfoFragment changeInfoFragment = new ChangeInfoFragment();
+                                changeInfoFragment.setArguments(bundleww);
+                                changeInfoFragment.show(profileFragment.getChildFragmentManager(), "Changeinfo"); // Use getChildFragmentManager for fragments
+
+                            }
+                        });
                         return true;
                 }
 

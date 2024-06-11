@@ -240,6 +240,27 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
 
+    //UPDATE USER INFO
+    String updateuserinfo(String id, String nickname, String bd, String email){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues cv = new ContentValues();
+        cv.put("nickname",nickname);
+        cv.put("birthday",bd);
+        cv.put("email",email);
+
+        int result = db.update("allusers", cv, "id = ?", new String[]{id} );
+        if (result > 0){
+            return "Your details Updated";
+        }else{
+            return "Not updated. Try again..";
+        }
+
+    }
+    //END USER INFO
+
+
+
 
 
 

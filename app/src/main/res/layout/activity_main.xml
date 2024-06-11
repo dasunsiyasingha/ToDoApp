@@ -13,6 +13,7 @@
         android:background="@color/lightBlue">
 
         <FrameLayout
+            android:id="@+id/appname"
             android:layout_width="169dp"
             android:layout_height="38dp"
             android:layout_alignParentStart="true"
@@ -22,6 +23,23 @@
             android:layout_marginTop="20dp"
             android:layout_marginBottom="22dp"
             android:background="@drawable/checkmateupperlogo" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="36dp">
+
+            <ImageView
+                android:id="@+id/changeinfobtn"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:background="@drawable/iconsettings"
+                android:visibility="invisible"/>
+
+        </RelativeLayout>
+
     </RelativeLayout>
 
     <FrameLayout
