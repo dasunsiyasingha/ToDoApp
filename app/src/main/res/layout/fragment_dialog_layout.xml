@@ -30,7 +30,8 @@
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
-            android:text="Add Task! "
+            android:text="Add Task "
+            android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="23dp" />
 
@@ -152,7 +153,7 @@
             android:layout_marginBottom="18dp"
             android:layout_toEndOf="@+id/status"
             android:checked="false"
-            android:text="pending"
+            android:text="completed"
             android:textSize="18dp" />
 
         <com.google.android.material.button.MaterialButton
