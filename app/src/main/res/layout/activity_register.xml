@@ -104,7 +104,7 @@
                 android:layout_marginTop="18dp"
                 android:layout_marginEnd="18dp"
                 android:background="@drawable/logininputdesign"
-                android:hint="birthday"
+                android:hint="birthday (ex. 1999.12.31)"
                 android:inputType="date"
                 android:paddingStart="8dp"
                 android:textSize="18dp" />

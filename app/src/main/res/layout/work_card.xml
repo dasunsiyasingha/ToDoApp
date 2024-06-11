@@ -38,27 +38,23 @@
                     android:layout_height="wrap_content"
                     android:text="Title"
                     android:textColor="@color/black"
-                    android:textSize="20dp" />
+                    android:textSize="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"/>
 
                 <TextView
                     android:id="@+id/viewdesc"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Description of works"
-                    android:textColor="@color/black" />
+                    android:textColor="@color/black"
+                    android:layout_marginBottom="10dp"/>
 
                 <TextView
                     android:id="@+id/viewlocation"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="At Location"
-                    android:textColor="@color/black" />
-
-                <TextView
-                    android:id="@+id/viewtime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="On Time"
                     android:textColor="@color/black" />
             </LinearLayout>
 
