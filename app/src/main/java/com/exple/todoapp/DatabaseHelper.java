@@ -259,6 +259,41 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
     //END USER INFO
 
+                                                                                    // PASSWORD UPDATE
+    //CHECK PASSWORD
+    boolean checkpassword(String userid, String enterpswd){
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor cursor = db.rawQuery("SELECT password FROM allusers WHERE id = ?",new String[]{userid});
+        String oldpassword = "";
+        while(cursor.moveToNext()){
+            oldpassword = cursor.getString(0);
+        }
+        if(oldpassword.equals(enterpswd)){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+    //END CHECK PASSWORD
+
+    //UPDATE PASSWORD
+    boolean updatepassword(String id, String newpassword){
+        SQLiteDatabase db = this.getWritableDatabase();
+
+        ContentValues cv = new ContentValues();
+        cv.put("password",newpassword);
+
+        int result = db.update("allusers", cv, "id = ?", new String[]{id} );
+        if (result > 0){
+            return true;
+        }else{
+            return false;
+        }
+
+    }
+    //END UPDATE PASSWORD
+
 
 
 
