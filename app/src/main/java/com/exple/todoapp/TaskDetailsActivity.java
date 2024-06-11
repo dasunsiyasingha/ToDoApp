@@ -18,7 +18,7 @@ public class TaskDetailsActivity extends AppCompatActivity {
         databaseHelper = new DatabaseHelper(this);
         setContentView(R.layout.activity_task_details);
 
-        TextView txttaskid = findViewById(R.id.detailtaskid);
+//        TextView txttaskid = findViewById(R.id.detailtaskid);
         TextView txttitle = findViewById(R.id.detailtasktitle);
         TextView txtdesc = findViewById(R.id.detailtaskdesc);
         TextView txtlocation = findViewById(R.id.detailtasklocation);
@@ -39,13 +39,13 @@ public class TaskDetailsActivity extends AppCompatActivity {
 
 
         if (extras == null){
-            txttaskid.setText("taskid");
+//            txttaskid.setText("taskid");
             txttitle.setText("title");
             txtdesc.setText("description");
             txtlocation.setText("location");
             txtstatus.setText("status");
         }else{
-            txttaskid.setText(taskid);
+//            txttaskid.setText(taskid);
             txttitle.setText(title);
             txtdesc.setText(desc);
             txtlocation.setText(location);

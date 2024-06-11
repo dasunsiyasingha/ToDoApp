@@ -31,11 +31,11 @@ public class PswdChangeFragment extends DialogFragment {
         Button cancelbtn = view.findViewById(R.id.cancelbtn);
 
 
-        TextView text = view.findViewById(R.id.text6);
+//        TextView text = view.findViewById(R.id.text6);
         databaseHelper = new DatabaseHelper(getContext());
 
         int userid = this.getArguments().getInt("userid");
-        text.setText(String.valueOf(userid));
+//        text.setText(String.valueOf(userid));
 
         okbtn.setOnClickListener(new View.OnClickListener() {
             @Override

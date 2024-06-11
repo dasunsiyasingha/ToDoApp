@@ -46,15 +46,14 @@ public class MyDialogFragment extends DialogFragment  {
         EditText title = view.findViewById(R.id.edtTitle);
         EditText description = view.findViewById(R.id.edtDesc);
         EditText location = view.findViewById(R.id.edtLocation);
-        TextView taskid = view.findViewById(R.id.taskid);
+//        TextView taskid = view.findViewById(R.id.taskid);
 
 
         CheckBox checkbox = view.findViewById(R.id.edtStatus);
         int nextTaskid = Integer.parseInt(databaseHelper.lasttaskid())+1;
 //        int nextTaskid = 1;
 
-        taskid.setText(String.valueOf(nextTaskid));
-//        taskid.setText(String.valueOf(userid));
+//        taskid.setText(String.valueOf(nextTaskid));
 
 
         dialogAddBtn.setOnClickListener(new View.OnClickListener() {

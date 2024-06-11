@@ -29,7 +29,7 @@ public class ChangeInfoFragment extends DialogFragment {
         databaseHelper = new DatabaseHelper(getContext());
         int id = this.getArguments().getInt("userid");
 
-        TextView chngeinfo = view.findViewById(R.id.changeinfo);
+//        TextView chngeinfo = view.findViewById(R.id.changeinfo);
 
         EditText chngeNickname = view.findViewById(R.id.chngnicknme);
         EditText chngeBd = view.findViewById(R.id.chngbd);
@@ -45,7 +45,7 @@ public class ChangeInfoFragment extends DialogFragment {
         chngeEmail.setText(userinfo.get("email"));
 
 
-        chngeinfo.setText(String.valueOf(id));
+//        chngeinfo.setText(String.valueOf(id));
 
         okbtn.setOnClickListener(new View.OnClickListener() {
             @Override

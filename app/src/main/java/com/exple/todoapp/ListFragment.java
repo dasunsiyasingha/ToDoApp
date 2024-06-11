@@ -34,8 +34,8 @@ public class ListFragment extends Fragment {
         View viewlist = inflater.inflate(R.layout.fragment_list, container, false);
         int userid = this.getArguments().getInt("userid");
 
-        TextView usrid = viewlist.findViewById(R.id.userid);
-        usrid.setText(userid+"");
+//        TextView usrid = viewlist.findViewById(R.id.userid);
+//        usrid.setText(userid+"");
 
 //VIEW LIST USING DATABASE DATA
         RecyclerView recyclerView = viewlist.findViewById(R.id.workrv);

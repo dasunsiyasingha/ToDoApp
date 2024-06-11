@@ -35,15 +35,15 @@
             android:textColor="@color/black"
             android:textSize="23dp" />
 
-        <TextView
-            android:id="@+id/taskid"
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="40dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="0"
-            android:textSize="18dp"
-            android:visibility="visible"/>
+<!--        <TextView-->
+<!--            android:id="@+id/taskid"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginStart="40dp"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="0"-->
+<!--            android:textSize="18dp"-->
+<!--            android:visibility="visible"/>-->
 
 
         <TextView
@@ -154,7 +154,7 @@
             android:layout_toEndOf="@+id/status"
             android:checked="false"
             android:text="completed"
-            android:textSize="18dp" />
+            android:textSize="16dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/dialogcancelbtn"
