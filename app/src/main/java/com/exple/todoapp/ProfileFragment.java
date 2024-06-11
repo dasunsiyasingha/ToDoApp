@@ -23,7 +23,7 @@ public class ProfileFragment extends Fragment {
 
     FragmentProfileBinding binding;
     DatabaseHelper databaseHelper;
-    Button signoutbtn;
+    Button signoutbtn, pswdchangebtn;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -59,11 +59,25 @@ public class ProfileFragment extends Fragment {
         taskprogress.setProgress(progressint);
 
         signoutbtn = view.findViewById(R.id.signoutbtn);
+        pswdchangebtn = view.findViewById(R.id.chngpswdtbtn);
+
         signoutbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getContext(),LoginActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        pswdchangebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Bundle bundle1 = new Bundle();
+                bundle1.putInt("userid", userid);
+                PswdChangeFragment pswdChangeFragment = new PswdChangeFragment();
+                pswdChangeFragment.setArguments(bundle1);
+                pswdChangeFragment.show(getChildFragmentManager(), "PswdChange"); // Use getChildFragmentManager for fragments
+
             }
         });
         return view;
