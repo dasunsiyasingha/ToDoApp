@@ -42,26 +42,18 @@
         android:layout_marginTop="40dp"
         android:layout_marginBottom="40dp"/>
 
-    <TextView
-        android:id="@+id/txttitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/txtmaintitle"
-        android:textStyle="bold"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:text="Title"
-        android:textSize="15dp"/>
-
                 <TextView
                     android:id="@+id/detailtasktitle"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Task Title"
-                    android:layout_below="@+id/txttitle"
+                    android:layout_below="@+id/txtmaintitle"
                     android:layout_marginStart="30dp"
                     android:layout_marginTop="8dp"
-                    android:textSize="18dp"/>
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"/>
 
     <TextView
         android:id="@+id/txtdesc"
@@ -71,8 +63,9 @@
         android:textStyle="bold"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
+        android:textColor="@color/black"
         android:text="Description"
-        android:textSize="15dp"/>
+        android:textSize="16dp"/>
 
                 <TextView
                     android:id="@+id/detailtaskdesc"
@@ -80,7 +73,8 @@
                     android:layout_height="wrap_content"
                     android:text="Task Description"
                     android:layout_below="@+id/txtdesc"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="48dp"
+                    android:textColor="@color/black"
                     android:layout_marginTop="8dp"
                     android:textSize="18dp"/>
 
@@ -93,8 +87,9 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:text="Location"
-        android:textSize="15dp"/>
+        android:textSize="16dp"/>
 
                 <TextView
                     android:id="@+id/detailtasklocation"
@@ -103,7 +98,8 @@
                     android:text="Task Location"
                     android:layout_below="@+id/txtlocation"
                     android:layout_marginTop="8dp"
-                    android:layout_marginStart="30dp"
+                    android:layout_marginStart="48dp"
+                    android:textColor="@color/black"
                     android:textSize="18dp"/>
 
     <TextView
@@ -115,7 +111,8 @@
         android:layout_marginTop="20dp"
         android:textStyle="bold"
         android:text="Status"
-        android:textSize="15dp"/>
+        android:textColor="@color/black"
+        android:textSize="16dp"/>
 
                 <Button
                     android:id="@+id/statusbtn"
@@ -123,7 +120,9 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/txtstatus"
                     android:layout_marginTop="8dp"
-                    android:layout_marginStart="25dp"
+                    android:layout_marginStart="48dp"
+                    android:textSize="16dp"
+                    android:textColor="@color/black"
                     android:text="Pending"/>
 
     <Button
