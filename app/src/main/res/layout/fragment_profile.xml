@@ -36,7 +36,7 @@
             android:id="@+id/usrpic"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/dassaprofile"
+            android:src="@drawable/personicon"
             android:background="@color/white"
             android:scaleType="centerCrop"/>
 

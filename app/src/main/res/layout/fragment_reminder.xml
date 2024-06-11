@@ -3,14 +3,223 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".ReminderFragment">
 
     <TextView
-        android:id="@+id/user"
-        android:layout_width="wrap_content"
+        android:id="@+id/txtprofiletitle"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
         android:layout_centerInParent="true"
-        android:text="Reminder Fragment"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="0dp"
+        android:text="Developer Info."
+        android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="20dp" />
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/usrpiccrd"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/txtprofiletitle"
+        android:layout_marginTop="10dp"
+        android:backgroundTint="@color/black"
+        android:layout_centerHorizontal="true"
+        app:cardCornerRadius="75dp">
+
+        <ImageView
+            android:id="@+id/usrpic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/dassaprofile"
+            android:background="@color/white"
+            android:scaleType="centerCrop"/>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/usrpiccrd"
+        android:layout_marginTop="-80dp"
+        android:background="#C3E7FB">
+
+        <TextView
+            android:id="@+id/texthinme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="95dp"
+            android:text="Dasun Siyasinghe\n(2021t01224)"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:layout_below="@+id/texthinme">
+
+            <TextView
+                android:id="@+id/titletxt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Personal Information"
+                android:textColor="@color/black"
+                android:layout_marginStart="24dp"
+                android:textSize="18dp"
+                android:textStyle="bold"/>
+
+            <RelativeLayout
+                android:id="@+id/namecontainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titletxt"
+                android:layout_marginTop="18dp">
+
+
+                <TextView
+                    android:id="@+id/nametxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Name"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="10dp"/>
+
+                <TextView
+                    android:id="@+id/usernameview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/nametxt"
+                    android:layout_centerHorizontal="true"
+                    android:text="Hewa Siyasingha Polgahamullage \nDasun Nilnuwan"
+                    android:textColor="@color/black"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/indexcontainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/namecontainer"
+                android:layout_marginTop="18dp">
+
+
+                <TextView
+                    android:id="@+id/indextxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Index"
+                    android:textColor="@color/black"
+                    android:layout_centerHorizontal="true"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/indexview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/indextxt"
+                    android:layout_centerHorizontal="true"
+                    android:text="2021T01224"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="10dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/bdcontainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/indexcontainer"
+                android:layout_marginTop="18dp">
+
+                <TextView
+                    android:id="@+id/bdtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="Birthday"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/userbdview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2001.02.24"
+                    android:layout_below="@+id/bdtxt"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="10dp"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/emailcontainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/bdcontainer"
+                android:layout_marginTop="18dp">
+
+                <TextView
+                    android:id="@+id/mailtxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:text="E - Mail"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="10dp" />
+
+                <TextView
+                    android:id="@+id/useremailview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="dasunnilnuwan@gmail.com"
+                    android:layout_below="@+id/mailtxt"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="20dp"
+                    android:layout_marginBottom="10dp"/>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+
+
+
+
 </RelativeLayout>
