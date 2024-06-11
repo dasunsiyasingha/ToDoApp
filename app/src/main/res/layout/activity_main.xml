@@ -12,28 +12,7 @@
         android:layout_height="80dp"
         android:background="@color/lightBlue">
 
-        <RelativeLayout
-            android:layout_alignParentEnd="true"
-            android:layout_centerVertical="true"
-            android:layout_marginEnd="26dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            >
-
-            <TextView
-                android:id="@+id/settingbtn"
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:textSize="26dp"
-                android:textColor="@color/black"
-                android:textStyle="bold"
-                android:background="@drawable/iconsettings"
-                android:visibility="invisible"/>
-        </RelativeLayout>
-
-
         <FrameLayout
-            android:id="@+id/frameLayout"
             android:layout_width="169dp"
             android:layout_height="38dp"
             android:layout_alignParentStart="true"

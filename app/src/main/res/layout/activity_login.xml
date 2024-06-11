@@ -54,7 +54,7 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="28dp"
+            android:layout_marginTop="18dp"
             android:layout_marginEnd="18dp"
             android:background="@drawable/logininputdesign"
             android:hint="Username"
@@ -85,11 +85,23 @@
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
             android:layout_marginStart="18dp"
-            android:layout_marginTop="36dp"
+            android:layout_marginTop="26dp"
             android:layout_marginEnd="18dp"
             android:backgroundTint="@color/blue"
             android:text="Sign in"
             android:textSize="23dp" />
+
+        <Button
+            android:id="@+id/btnfgtpwd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btnsignin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="18dp"
+            android:backgroundTint="@color/white"
+            android:text="forget password"
+            android:textColor="@color/blue"
+            android:textSize="18dp" />
 
     </RelativeLayout>
 
@@ -128,14 +140,12 @@
             android:background="@color/black" />
     </LinearLayout>
 
-    <TextView
+    <Button
         android:id="@+id/btnmoveregister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/linearLayout"
         android:layout_marginTop="18dp"
-        android:textColor="@color/blue"
-        android:textStyle="bold"
         android:layout_centerHorizontal="true"
         android:text="Your Haven't an Account"
         android:textSize="18dp"/>
