@@ -7,9 +7,11 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.Switch;
 
 import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -35,8 +37,8 @@ public class MainActivity extends AppCompatActivity {
         bottomNavigationView = findViewById(R.id.bottomNav);
         ImageView chngeinfobtn = findViewById(R.id.changeinfobtn);
 
-        //when Open app ByDefualt open list fragment
-//        getSupportFragmentManager().beginTransaction().replace(R.id.container,listFragment).commit();
+
+
         FragmentManager fragmentManagerlist = getSupportFragmentManager();
         FragmentTransaction fragmentTransactionlist = fragmentManagerlist.beginTransaction();
 
@@ -45,10 +47,6 @@ public class MainActivity extends AppCompatActivity {
 
         listFragment.setArguments(bundle);
         fragmentTransactionlist.replace(R.id.container,listFragment).commit();
-
-//        BadgeDrawable badgeDrawable = bottomNavigationView.getOrCreateBadge(R.id.reminder);
-//        badgeDrawable.setVisible(true);
-//        badgeDrawable.setNumber(4);
 
         bottomNavigationView.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
 
@@ -59,12 +57,8 @@ public class MainActivity extends AppCompatActivity {
 
                 switch (item.getItemId()){
                     case R.id.list:
-//                        getSupportFragmentManager().beginTransaction().replace(R.id.container, listFragment).commit();
                         FragmentManager fragmentManagerlist = getSupportFragmentManager();
                         FragmentTransaction fragmentTransactionlist = fragmentManagerlist.beginTransaction();
-
-//                        Bundle bundle = new Bundle();
-//                        bundle.putInt("userid",id);
 
                         listFragment.setArguments(bundle);
                         fragmentTransactionlist.replace(R.id.container,listFragment).commit();
@@ -73,27 +67,18 @@ public class MainActivity extends AppCompatActivity {
                         return true;
 
                     case R.id.reminder:
-//                        getSupportFragmentManager().beginTransaction().replace(R.id.container, reminderFragment).commit();
                         FragmentManager fragmentManagerreminder = getSupportFragmentManager();
                         FragmentTransaction fragmentTransactionreminder = fragmentManagerreminder.beginTransaction();
-
-//                        Bundle bundle = new Bundle();
-//                        bundle.putInt("userid", id);
 
                         reminderFragment.setArguments(bundle);
                         fragmentTransactionreminder.replace(R.id.container,reminderFragment).commit();
                         chngeinfobtn.setVisibility(View.INVISIBLE);
 
-//                        badgeDrawable.setVisible(false);
-//                        badgeDrawable.clearNumber();
                         return true;
 
                     case R.id.profile:
                         FragmentManager fragmentManagerprofile = getSupportFragmentManager();
                         FragmentTransaction fragmentTransactionprofile = fragmentManagerprofile.beginTransaction();
-
-//                        Bundle bundle = new Bundle();
-//                        bundle.putInt("userid",id);
 
                         profileFragment.setArguments(bundle);
                         fragmentTransactionprofile.replace(R.id.container,profileFragment).commit();
@@ -111,10 +96,10 @@ public class MainActivity extends AppCompatActivity {
                         });
                         return true;
                 }
-
                 return false;
             }
         });
 
     }
+
 }
