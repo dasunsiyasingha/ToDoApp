@@ -11,12 +11,12 @@
     tools:context=".MyDialogFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/workrv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="14dp" />
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/workrv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="14dp" />-->
 
     <RelativeLayout
         android:id="@+id/inputslayout"
@@ -65,7 +65,7 @@
             android:layout_height="50dp"
             android:layout_below="@+id/title"
             android:layout_marginTop="5dp"
-            android:text="Enter Title"
+            android:hint="Enter Title"
             android:textSize="18dp"
             android:inputType="text"
             android:layout_marginStart="18dp"
@@ -91,7 +91,7 @@
             android:layout_height="50dp"
             android:layout_below="@+id/desc"
             android:layout_marginTop="5dp"
-            android:text="Enter Description"
+            android:hint="Enter Description"
             android:textSize="18dp"
             android:inputType="text"
             android:layout_marginStart="18dp"
@@ -119,36 +119,13 @@
             android:layout_height="50dp"
             android:layout_below="@+id/location"
             android:layout_marginTop="5dp"
-            android:text="Enter Location"
+            android:hint="Enter Location"
             android:inputType="text"
             android:textSize="18dp"
             android:layout_marginStart="18dp"
             android:layout_marginEnd="18dp"
             android:textColor="#787878"
             />
-
-<!--        <TextView-->
-<!--            android:id="@+id/time"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_below="@+id/edtLocation"-->
-<!--            android:layout_alignParentStart="true"-->
-<!--            android:layout_marginStart="18dp"-->
-<!--            android:layout_marginEnd="18dp"-->
-<!--            android:layout_marginTop="18dp"-->
-<!--            android:text="Time:"-->
-<!--            android:textColor="@color/black"-->
-<!--            android:textSize="16dp" />-->
-<!--        -->
-<!--        <TimePicker-->
-<!--            android:id="@+id/edtTime"-->
-<!--            android:layout_width="wrap_content"-->
-<!--            android:layout_height="140dp"-->
-<!--            android:layout_below="@+id/time"-->
-<!--            android:layout_marginTop="5dp"-->
-<!--            android:layout_marginStart="18dp"-->
-<!--            android:layout_marginEnd="18dp"-->
-<!--            android:timePickerMode="spinner" />-->
 
         <TextView
             android:id="@+id/status"
