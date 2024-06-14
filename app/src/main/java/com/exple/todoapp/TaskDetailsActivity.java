@@ -23,6 +23,7 @@ public class TaskDetailsActivity extends AppCompatActivity {
         TextView txtdesc = findViewById(R.id.detailtaskdesc);
         TextView txtlocation = findViewById(R.id.detailtasklocation);
         TextView txtstatus = findViewById(R.id.statusbtn);
+        TextView backbtn = findViewById(R.id.backbtn);
         Button deletebtn = findViewById(R.id.deletebtn);
         Button statusbtn = findViewById(R.id.statusbtn);
 
@@ -77,6 +78,17 @@ public class TaskDetailsActivity extends AppCompatActivity {
                 intentlogin.putExtras(bundle);
                 startActivity(intentlogin);
 
+            }
+        });
+
+        backbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intentlogin = new Intent(getApplicationContext(), MainActivity.class);
+                Bundle bundle1 = new Bundle();
+                bundle1.putInt("usrid", userid);
+                intentlogin.putExtras(bundle1);
+                startActivity(intentlogin);
             }
         });
     }

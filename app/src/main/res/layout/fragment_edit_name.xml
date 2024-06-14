@@ -60,6 +60,7 @@
                 android:layout_below="@+id/oldpswdtxt"
                 android:background="@drawable/logininputdesign"
                 android:hint="current password"
+                android:inputType="textPassword"
                 android:paddingStart="8dp"
                 android:textSize="18dp" />
 

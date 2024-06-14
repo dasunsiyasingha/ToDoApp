@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ReminderFragment">
+    tools:context=".DevinfoFragment">
 
     <TextView
         android:id="@+id/txtprofiletitle"
@@ -62,12 +62,17 @@
             android:textSize="18dp"
             android:textStyle="bold" />
 
-
-        <RelativeLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
             android:layout_marginTop="18dp"
+            android:layout_centerHorizontal="true"
             android:layout_below="@+id/texthinme">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
 
             <TextView
@@ -262,8 +267,8 @@
                     android:layout_marginBottom="10dp"/>
             </RelativeLayout>
 
-        </RelativeLayout>
-
+        </LinearLayout>
+        </ScrollView>
 
     </RelativeLayout>
 

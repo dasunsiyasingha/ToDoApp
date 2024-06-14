@@ -1,19 +1,15 @@
 package com.exple.todoapp;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
-import android.widget.Switch;
 
-import com.google.android.material.badge.BadgeDrawable;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
 
@@ -21,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNavigationView;
     ListFragment listFragment = new ListFragment();
-    ReminderFragment reminderFragment = new ReminderFragment();
+    DevinfoFragment devinfoFragment = new DevinfoFragment();
     ProfileFragment profileFragment = new ProfileFragment();
 
     @Override
@@ -70,8 +66,8 @@ public class MainActivity extends AppCompatActivity {
                         FragmentManager fragmentManagerreminder = getSupportFragmentManager();
                         FragmentTransaction fragmentTransactionreminder = fragmentManagerreminder.beginTransaction();
 
-                        reminderFragment.setArguments(bundle);
-                        fragmentTransactionreminder.replace(R.id.container,reminderFragment).commit();
+                        devinfoFragment.setArguments(bundle);
+                        fragmentTransactionreminder.replace(R.id.container, devinfoFragment).commit();
                         chngeinfobtn.setVisibility(View.INVISIBLE);
 
                         return true;

@@ -28,7 +28,7 @@
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="340dp"
-        android:layout_height="360dp"
+        android:layout_height="320dp"
         android:layout_centerInParent="true"
         android:layout_marginEnd="37dp"
         android:background="@drawable/logincontainer">
@@ -91,17 +91,17 @@
             android:text="Sign in"
             android:textSize="23dp" />
 
-        <Button
-            android:id="@+id/btnfgtpwd"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/btnsignin"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="18dp"
-            android:backgroundTint="@color/white"
-            android:text="forget password"
-            android:textColor="@color/blue"
-            android:textSize="18dp" />
+<!--        <Button-->
+<!--            android:id="@+id/btnfgtpwd"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_below="@+id/btnsignin"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginTop="18dp"-->
+<!--            android:backgroundTint="@color/white"-->
+<!--            android:text="forget password"-->
+<!--            android:textColor="@color/blue"-->
+<!--            android:textSize="18dp" />-->
 
     </RelativeLayout>
 
@@ -140,7 +140,7 @@
             android:background="@color/black" />
     </LinearLayout>
 
-    <Button
+    <TextView
         android:id="@+id/btnmoveregister"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -148,6 +148,8 @@
         android:layout_marginTop="18dp"
         android:layout_centerHorizontal="true"
         android:text="Your Haven't an Account"
+        android:textColor="@color/blue"
+        android:textStyle="bold"
         android:textSize="18dp"/>
 
 

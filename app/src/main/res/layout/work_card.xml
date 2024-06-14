@@ -45,12 +45,12 @@
 
                 <TextView
                     android:id="@+id/viewdesc"
-                    android:layout_width="wrap_content"
+                    android:layout_width="231dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
                     android:text="Description of works"
                     android:textColor="@color/black"
-                    android:textSize="16dp"
-                    android:layout_marginBottom="10dp"/>
+                    android:textSize="16dp" />
 
                 <TextView
                     android:id="@+id/viewlocation"
